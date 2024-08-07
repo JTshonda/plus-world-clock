@@ -24,6 +24,9 @@ select {
 h2 {
   margin: 0 0 5px;
 }
+.citydetails {
+  font-size: 22px;
+}
 .date {
   opacity: 0.7;
 }
