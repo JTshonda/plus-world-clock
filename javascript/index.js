@@ -22,6 +22,17 @@ function updateTime() {
     );
   }
 
+  let lubumbashiEle = document.querySelector("#lubumbashi");
+  if (lubumbashiEle) {
+    let lubumbashiDateEle = lubumbashiEle.querySelector(".date");
+    let lubumbashiTimeEle = lubumbashiEle.querySelector(".time");
+    let lubumbashiTime = moment().tz("Africa/Lubumbashi");
+    lubumbashiDateEle.innerHTML = moment().format("MMMM Do YYYY");
+    lubumbashiTimeEle.innerHTML = lubumbashiTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+
   let kinshasaEle = document.querySelector("#kinshasa");
   if (kinshasaEle) {
     let kinshasaDateEle = kinshasaEle.querySelector(".date");
@@ -48,7 +59,7 @@ function updateCity(event) {
     .format("h:mm:ss [<small>]A[</small>]");
   let cityElement = document.querySelector("#cities");
   cityElement.innerHTML = ` <div class="city"">
-          <div>
+          <div class="citydetails">
             <h2>${cityName}</h2>
             <div class="date">${cityDate}</div>
           </div>
