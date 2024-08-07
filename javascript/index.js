@@ -1,32 +1,36 @@
 //los angeles
 function updateTime() {
-  let losAngelesEle = document.querySelector("#los-angeles");
-  if (losAngelesEle) {
-    let losAngelesDateEle = losAngelesEle.querySelector(".date");
-    let losAngelesTimeEle = losAngelesEle.querySelector(".time");
-    let losAngelesTime = moment().tz("America/Los_Angeles");
-    losAngelesDateEle.innerHTML = moment().format("MMMM Do YYYY");
-    losAngelesTimeEle.innerHTML = losAngelesTime.format(
+  let capeTownEle = document.querySelector("#cape-town");
+  if (capeTownEle) {
+    let capeTownDateEle = capeTownEle.querySelector(".date");
+    let capeTownTimeEle = capeTownEle.querySelector(".time");
+    let capeTownTime = moment().tz("Africa/Johannesburg");
+    capeTownDateEle.innerHTML = moment().format("MMMM Do YYYY");
+    capeTownTimeEle.innerHTML = capeTownTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
 
-  let londonEle = document.querySelector("#london");
-  if (londonEle) {
-    let londonDateEle = londonEle.querySelector(".date");
-    let londonTimeEle = londonEle.querySelector(".time");
-    let londonTime = moment().tz("Europe/London");
-    londonDateEle.innerHTML = moment().format("MMMM Do YYYY");
-    londonTimeEle.innerHTML = londonTime.format("h:mm:ss [<small>]A[</small>]");
+  let bronkhorstspruitEle = document.querySelector("#Bronkhorstspruit");
+  if (bronkhorstspruitEle) {
+    let bronkhorstspruitDateEle = bronkhorstspruitEle.querySelector(".date");
+    let bronkhorstspruitTimeEle = bronkhorstspruitEle.querySelector(".time");
+    let bronkhorstspruitTime = moment().tz("Africa/Johannesburg");
+    bronkhorstspruitDateEle.innerHTML = moment().format("MMMM Do YYYY");
+    bronkhorstspruitTimeEle.innerHTML = bronkhorstspruitTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
   }
 
-  let sydneyEle = document.querySelector("#sydney");
-  if (sydneyEle) {
-    let sydneyDateEle = sydneyEle.querySelector(".date");
-    let sydneyTimeEle = sydneyEle.querySelector(".time");
-    let sydneyTime = moment().tz("Australia/Sydney");
-    sydneyDateEle.innerHTML = moment().format("MMMM Do YYYY");
-    sydneyTimeEle.innerHTML = sydneyTime.format("h:mm:ss [<small>]A[</small>]");
+  let kinshasaEle = document.querySelector("#kinshasa");
+  if (kinshasaEle) {
+    let kinshasaDateEle = kinshasaEle.querySelector(".date");
+    let kinshasaTimeEle = kinshasaEle.querySelector(".time");
+    let kinshasaTime = moment().tz("Africa/Kinshasa");
+    kinshasaDateEle.innerHTML = moment().format("MMMM Do YYYY");
+    kinshasaTimeEle.innerHTML = kinshasaTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
   }
 }
 updateTime();
@@ -49,7 +53,9 @@ function updateCity(event) {
             <div class="date">${cityDate}</div>
           </div>
           <div class="time">${cityTime}</div>
-        </div>`;
+        </div>
+        <br/>
+        <a href="/">All cities</a>`;
 }
 
 let selectcity = document.querySelector("#city");
